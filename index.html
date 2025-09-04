@@ -1,1 +1,298 @@
-
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Data Science - Inteligência Artificial</title>
+    <style>
+        /* Estilos Gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        h1, h2, h3 {
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #2980b9;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Seção 1: Introdução */
+        #intro {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        #intro h1, #intro h2 {
+            color: white;
+        }
+        
+        .intro-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .intro-text {
+            max-width: 800px;
+            margin-bottom: 30px;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 800px;
+            margin: 30px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        /* Seção 2: IA e Vídeos */
+        #ia-section {
+            background-color: white;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .topic-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .topic-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .topic-card h3 {
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+        
+        .video-count {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-top: 15px;
+        }
+        
+        /* Seção 3: Futuro e SETEC */
+        #future {
+            background: #2c3e50;
+            color: white;
+        }
+        
+        #future h2 {
+            color: white;
+        }
+        
+        .future-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .future-text {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 30px;
+        }
+        
+        .future-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .future-image img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .future-content {
+                flex-direction: column;
+            }
+            
+            .future-text {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Seção 1: Introdução ao curso de Data Science -->
+    <section id="intro">
+        <div class="container">
+            <div class="intro-content">
+                <div class="intro-text">
+                    <h1>Curso de Data Science</h1>
+                    <h2>Transformando dados em insights valiosos</h2>
+                    <p>O curso de Data Science oferece uma formação completa na área de ciência de dados, combinando conceitos estatísticos, programação e conhecimento de negócios. Nossos alunos aprendem a coletar, processar, analisar e interpretar grandes volumes de dados para extrair informações relevantes e apoiar a tomada de decisões estratégicas.</p>
+                    <p>Com uma abordagem prática e baseada em projetos reais, os estudantes desenvolvem habilidades em machine learning, visualização de dados, mineração de dados e muito mais, preparando-se para um mercado em constante crescimento.</p>
+                </div>
+                
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-number">+500</div>
+                        <div class="stat-desc">Alunos formados</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">92%</div>
+                        <div class="stat-desc">Taxa de empregabilidade</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">18</div>
+                        <div class="stat-desc">Meses de duração</div>
+                    </div>
+                </div>
+                
+                <a href="#ia-section" class="btn">Conhecer os Módulos</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção 2: Inteligência Artificial e quantidade de vídeos -->
+    <section id="ia-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Inteligência Artificial no Curso de Data Science</h2>
+                <p>Explore os principais tópicos de IA com a quantidade de vídeos necessários para cada módulo</p>
+            </div>
+            
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <h3>Introdução à IA</h3>
+                    <p>Conceitos fundamentais, histórico e aplicações práticas da Inteligência Artificial no mundo real.</p>
+                    <span class="video-count">8 vídeos</span>
+                </div>
+                
+                <div class="topic-card">
+                    <h3>Machine Learning</h3>
+                    <p>Algoritmos de aprendizado supervisionado e não supervisionado, regressão, classificação e clustering.</p>
+                    <span class="video-count">15 vídeos</span>
+                </div>
+                
+                <div class="topic-card">
+                    <h3>Deep Learning</h3>
+                    <p>Redes neurais artificiais, redes neurais convolucionais (CNN) e redes neurais recorrentes (RNN).</p>
+                    <span class="video-count">12 vídeos</span>
+                </div>
+                
+                <div class="topic-card">
+                    <h3>Processamento de Linguagem Natural</h3>
+                    <p>Técnicas para análise e geração de texto, sentiment analysis e chatbots.</p>
+                    <span class="video-count">10 vídeos</span>
+                </div>
+                
+                <div class="topic-card">
+                    <h3>Visão Computacional</h3>
+                    <p>Reconhecimento de imagens, detecção de objetos e aplicações em diferentes indústrias.</p>
+                    <span class="video-count">9 vídeos</span>
+                </div>
+                
+                <div class="topic-card">
+                    <h3>Ética em IA</h3>
+                    <p>Discussões sobre viés algorítmico, privacidade de dados e responsabilidade no desenvolvimento de IA.</p>
+                    <span class="video-count">6 vídeos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção 3: Futuro relacionado à SETEC -->
+    <section id="future">
+        <div class="container">
+            <div class="future-content">
+                <div class="future-text">
+                    <h2>Futuro e Conexões com a SETEC</h2>
+                    <p>A SETEC (Secretaria de Educação Profissional e Tecnológica) tem impulsionado iniciativas para expandir o ensino de tecnologia no Brasil, com foco especial em Data Science e Inteligência Artificial.</p>
+                    <p>No futuro, planejamos expandir nossa parceria com a SETEC para oferecer:</p>
+                    <ul>
+                        <li>Cursos técnicos em IA e Data Science em todas as regiões do país</li>
+                        <li>Programas de capacitação para professores</li>
+                        <li>Laboratórios equipados com tecnologia de ponta</li>
+                        <li>Parcerias com empresas para estágios e empregos</li>
+                        <li>Projetos de pesquisa aplicada em conjunto com instituições de ensino</li>
+                    </ul>
+                    <p>Estas iniciativas visam preparar profissionais para o mercado de trabalho do futuro, cada vez mais orientado por dados e soluções de inteligência artificial.</p>
+                </div>
+                
+                <div class="future-image">
+                    <img src="https://placehold.co/600x400/2c3e50/ffffff?text=Futuro+SETEC+Data+Science" alt="Futuro da SETEC no Data Science">
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
