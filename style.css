@@ -1,100 +1,108 @@
-* { margin: 0; /* remove margens padrão */
-    padding: 0; /* remove espaçamentos padrão */
-    box-sizing: border-box; /* mantém largura previsível */ }
+/* Reset básico */
+* { margin: 0; padding: 0; box-sizing: border-box; } /* → Remove margens/padding */
 
-body { font-family: Arial, sans-serif; /* fonte */
-    background: #000; /* fundo preto */
-    color: #fff; /* texto branco */
-    line-height: 1.6; /* altura do texto */ }
+/* Corpo */
+body { 
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* → Fonte elegante e legível */
+    background-color: #f9f9f9; /* → Fundo claro */
+    color: #333; /* → Texto escuro */
+    line-height: 1.6; /* → Espaçamento entre linhas */
+}
 
-.container { max-width: 1200px; /* largura máxima */
-    margin: 0 auto; /* centraliza */
-    padding: 0 20px; /* espaçamento interno */ }
+/* Container central */
+.container { 
+    width: 90%; /* → Largura de 90% */
+    max-width: 1200px; /* → Máximo 1200px */
+    margin: 0 auto; /* → Centraliza horizontalmente */
+}
 
-header { background: #111; /* cabeçalho escuro */
-    color: #0ff; /* azul neon */
-    text-align: center; /* centraliza texto */
-    padding: 2rem 0; /* espaçamento interno */
-    border-bottom: 2px solid #0ff; /* borda neon */ }
+/* Cabeçalho */
+.header { 
+    text-align: center; /* → Centraliza conteúdo */
+    padding: 2rem 0; /* → Espaçamento vertical */
+    background-color: #ffffff; /* → Fundo branco */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* → Sombra discreta */
+}
+.header h1 { 
+    font-size: 2.5rem; /* → Tamanho grande */
+    margin-bottom: 1rem; /* → Espaço abaixo */
+}
+.header p { 
+    font-size: 1rem; /* → Texto médio */
+    margin: 0.3rem 0; /* → Pequeno espaçamento */
+}
 
-h1 { font-size: 2.5rem; /* título grande */
-    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff; /* efeito neon */ }
+/* Seções */
+.section { 
+    background-color: #ffffff; /* → Fundo branco */
+    padding: 3rem 2rem; /* → Espaçamento interno */
+    margin: 2rem 0; /* → Margem entre seções */
+    border-radius: 10px; /* → Bordas arredondadas */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* → Sombra leve */
+}
+.section h2 { 
+    font-size: 2rem; /* → Título da seção */
+    margin-bottom: 1rem; /* → Espaço abaixo */
+    color: #222; /* → Texto escuro */
+}
+.section p { 
+    font-size: 1rem; /* → Texto normal */
+    margin-bottom: 1rem; /* → Espaço entre parágrafos */
+}
 
-.info { background: rgba(255,255,255,0.05); /* transparente */
-    border: 1px solid #0ff; /* borda neon */
-    padding: 1rem; /* espaçamento */
-    margin-top: 1rem; /* espaço acima */
-    border-radius: 8px; /* arredondado */ }
+/* Lista IA */
+.ai-list { 
+    list-style: none; /* → Remove marcadores */
+    padding-left: 0; /* → Remove padding */
+}
+.ai-list li { 
+    padding: 0.5rem 0; /* → Espaçamento vertical */
+    font-size: 1rem; /* → Texto médio */
+}
 
-.section { background: #111; /* fundo escuro */
-    margin: 2rem 0; /* espaçamento */
-    padding: 2rem; /* espaçamento */
-    border-radius: 12px; /* bordas arredondadas */
-    border: 1px solid #0ff; /* borda neon */
-    box-shadow: 0 0 20px rgba(0,255,255,0.3); /* brilho neon */
-    transition: transform 0.3s ease; /* efeito suave */ }
+/* Grid recursos futuros */
+.future-grid { 
+    display: grid; /* → Layout em grid */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* → Responsivo */
+    gap: 1rem; /* → Espaçamento entre itens */
+    margin-top: 1rem; /* → Espaço acima do grid */
+}
+.future-item { 
+    background-color: #f4f4f4; /* → Fundo cinza claro */
+    padding: 1rem; /* → Espaçamento interno */
+    border-radius: 8px; /* → Bordas arredondadas */
+    text-align: center; /* → Centraliza conteúdo */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* → Sombra discreta */
+}
+.future-item i { 
+    font-size: 2rem; /* → Ícones grandes */
+    margin-bottom: 0.5rem; /* → Espaço abaixo do ícone */
+}
 
-.section:hover { transform: scale(1.02); /* aumenta no hover */
-    box-shadow: 0 0 30px #0ff, 0 0 60px #0ff; /* brilho maior */ }
+/* Área de vídeo */
+.video-area { 
+    margin-top: 1.5rem; /* → Espaço acima */
+    text-align: center; /* → Centraliza vídeo */
+    padding: 1rem; /* → Espaço interno */
+    border: 1px solid #ddd; /* → Borda discreta */
+    border-radius: 8px; /* → Bordas arredondadas */
+    background-color: #fafafa; /* → Fundo leve */
+}
 
-.section h2 { color: #0ff; /* neon */
-    margin-bottom: 1rem; /* espaço */
-    text-shadow: 0 0 10px #0ff; /* brilho */ }
+/* Rodapé */
+.footer { 
+    background-color: #ffffff; /* → Fundo branco */
+    text-align: center; /* → Centraliza texto */
+    padding: 1.5rem 0; /* → Espaçamento interno */
+    border-top: 1px solid #ddd; /* → Linha superior discreta */
+    font-size: 0.9rem; /* → Texto menor */
+}
 
-.section p { margin-bottom: 1rem; /* espaçamento */
-    color: #ccc; /* cinza claro */ }
-
-.ai-topics { display: grid; /* grid layout */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* colunas responsivas */
-    gap: 1rem; /* espaçamento */ }
-
-.topic { background: #000; /* preto */
-    border-left: 4px solid #0ff; /* borda neon lateral */
-    padding: 1rem; /* espaçamento */
-    border-radius: 8px; /* arredondado */
-    box-shadow: 0 0 15px rgba(0,255,255,0.2); /* brilho suave */
-    transition: 0.3s; /* efeito suave */ }
-
-.topic:hover { transform: translateY(-5px); /* sobe */
-    box-shadow: 0 0 25px #0ff; /* brilho maior */ }
-
-.video-count { background: #0ff; /* neon */
-    color: #000; /* texto preto */
-    padding: 0.3rem 0.6rem; /* espaçamento */
-    border-radius: 20px; /* arredondado */
-    font-weight: bold; /* negrito */ }
-
-.video-section { margin-top: 1.5rem; /* espaço acima */
-    background: #000; /* fundo preto */
-    border: 2px dashed #0ff; /* borda tracejada neon */
-    padding: 1rem; /* espaçamento */
-    text-align: center; /* centraliza */ }
-
-.video-placeholder { background: #111; /* fundo escuro */
-    height: 200px; /* altura fixa */
-    display: flex; /* centraliza conteúdo */
-    align-items: center; /* vertical */
-    justify-content: center; /* horizontal */
-    border: 1px solid #0ff; /* borda neon */
-    border-radius: 8px; /* arredondado */
-    color: #0ff; /* texto neon */ }
-
-.future-resources { display: grid; /* grid */
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* colunas responsivas */
-    gap: 1rem; /* espaçamento */ }
-
-.resource-item { background: #000; /* preto */
-    border: 1px solid #0ff; /* borda neon */
-    padding: 1rem; /* espaçamento */
-    border-radius: 8px; /* arredondado */
-    text-align: center; /* centralizado */
-    transition: 0.3s; /* suave */ }
-
-.resource-item:hover { transform: scale(1.05); /* aumenta no hover */
-    box-shadow: 0 0 20px #0ff; /* brilho neon */ }
-
-footer { background: #111; /* escuro */
-    color: #0ff; /* neon */
-    text-align: center; /* centraliza */
-    padding: 1.5rem 0; /* espaçamento */
-    border-top: 2px solid #0ff; /* borda neon */ }
+/* Responsividade básica */
+@media (max-width: 768px) { 
+    .section { padding: 2rem 1rem; } /* → Ajusta padding em tablets */
+}
+@media (max-width: 480px) { 
+    .section { padding: 1.5rem 1rem; } /* → Ajusta padding em celulares */
+    .header h1 { font-size: 2rem; } /* → Reduz título */
+}
