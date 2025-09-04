@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!-- Define a codificação de caracteres como UTF-8 -->
-    <meta charset="UTF-8">
-    <!-- Garante responsividade em dispositivos móveis -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Título da aba do navegador -->
-    <title>Curso de Desenvolvimento de Sistemas com IA</title>
-    <!-- Importa ícones da Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Link para o CSS personalizado -->
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8"> <!-- Codificação UTF-8 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade -->
+<title>Curso de Desenvolvimento de Sistemas com IA</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css"> <!-- CSS externo -->
 </head>
 <body>
+    <!-- FUNDO ANIMADO -->
+    <div class="universe"></div>
+
     <!-- Cabeçalho da página -->
     <header>
-        <h1>Curso de Desenvolvimento de Sistemas</h1> <!-- Título principal do site -->
-        <p>Preparando os profissionais do futuro para o mercado de tecnologia</p> <!-- Descrição do curso -->
-        <p><strong>Aluno Destaque:</strong> Burzuk – Jean Carlos de Souza</p> <!-- Aluno destaque -->
+        <h1>Curso de Desenvolvimento de Sistemas</h1>
+        <p>Preparando os profissionais do futuro para o mercado de tecnologia</p>
+        <p><strong>Aluno Destaque:</strong> Burzuk – Jean Carlos de Souza</p>
     </header>
 
     <!-- Primeira seção: Sobre o curso -->
     <section id="sobre">
-        <h2 class="section-title">Sobre o Curso</h2> <!-- Título da seção -->
-        <div class="curso-content"> <!-- Container da seção com texto e imagem -->
+        <h2 class="section-title">Sobre o Curso</h2>
+        <div class="curso-content">
             <div class="curso-texto">
                 <p>O curso de Desenvolvimento de Sistemas prepara os estudantes para atuarem no desenvolvimento de soluções tecnológicas inovadoras, combinando conhecimentos de programação, banco de dados e desenvolvimento web.</p>
                 <p>Com uma abordagem prática e atualizada, o curso oferece aos alunos a oportunidade de trabalhar com as ferramentas e tecnologias mais recentes do mercado, preparando-os para os desafios da indústria 4.0.</p>
@@ -32,7 +30,6 @@
                 <p>O desenvolvimento de soft skills, como trabalho em equipe, criatividade e capacidade de resolver problemas complexos, também é prioridade do curso, preparando verdadeiros profissionais completos.</p>
             </div>
             <div class="curso-imagem">
-                <!-- Imagem ilustrativa do curso -->
                 <img src="https://placehold.co/600x400/000000/ffffff?text=Desenvolvimento+de+Sistemas" alt="Imagem representando o curso de Desenvolvimento de Sistemas">
             </div>
         </div>
@@ -49,9 +46,7 @@
             <p>O curso também incentiva a participação em hackathons e workshops de IA, promovendo a troca de experiências e fortalecendo a capacidade de criação de soluções originais.</p>
         </div>
 
-        <!-- Container de vídeos explicativos -->
         <div class="videos-container">
-            <!-- Cada vídeo -->
             <div class="video-wrapper">
                 <iframe src="https://www.youtube.com/embed/CmAcro8YblU" title="Inteligência Artificial: O Que É e Como Funciona" allowfullscreen></iframe>
                 <div class="video-info">
@@ -74,7 +69,7 @@
                 <iframe src="https://www.youtube.com/embed/V2POyQVQuzA" title="Machine Learning: Como a Máquina Aprende Sozinha" allowfullscreen></iframe>
                 <div class="video-info">
                     <h3>Machine Learning</h3>
-                    <p>Os fundamentos do aprendizado de máquina, suas aplicações práticas e como Burzuk – Jean Carlos de Souza vicente  aplica esses conhecimentos em projetos reais.</p>
+                    <p>Os fundamentos do aprendizado de máquina, suas aplicações práticas e como Burzuk – Jean Carlos de Souza aplica esses conhecimentos em projetos reais.</p>
                     <span class="videos-qtd">7 vídeos</span>
                 </div>
             </div>
@@ -92,7 +87,7 @@
 
     <!-- Terceira seção: Futuro SETEC -->
     <section id="futuro-setec">
-        <h2 class="section-title">Futuro Relacionado à SETEc</h2>
+        <h2 class="section-title">Futuro Relacionado à SETEC</h2>
         <div class="setec-content">
             <img src="https://placehold.co/200x100/000000/ffffff?text=SETEC" alt="Logo SETEC" class="setec-logo">
             <p>A Secretaria de Educação Profissional e Tecnológica (SETEC) tem um papel fundamental na expansão e consolidação dos cursos de tecnologia no Brasil, incluindo o curso de Desenvolvimento de Sistemas.</p>
@@ -114,5 +109,24 @@
             <a href="#"><i class="fab fa-linkedin"></i></a>
         </div>
     </footer>
+
+    <!-- SCRIPT JAVASCRIPT PARA FUNDO ANIMADO -->
+    <script>
+        // Seleciona o container do fundo
+        const universe = document.querySelector('.universe');
+        const starsCount = 100; // número de estrelas/burbuletas
+
+        for(let i = 0; i < starsCount; i++) {
+            const star = document.createElement('span'); // cria uma estrela
+            const size = Math.random() * 3 + 1; // tamanho aleatório
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.left = `${Math.random() * 100}%`; // posição horizontal aleatória
+            star.style.top = `${Math.random() * 100}%`;  // posição vertical aleatória
+            star.style.animationDuration = `${Math.random() * 10 + 5}s`; // duração da animação
+            star.style.animationDelay = `${Math.random() * 5}s`; // atraso da animação
+            universe.appendChild(star);
+        }
+    </script>
 </body>
 </html>
