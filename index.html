@@ -1,106 +1,109 @@
-<!DOCTYPE html> <!-- → Define HTML5 -->
-<html lang="pt-BR"> <!-- → Define idioma do site -->
-<head> <!-- → Cabeçalho -->
-    <meta charset="UTF-8"> <!-- → Suporte a caracteres especiais -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- → Responsivo -->
-    <title>Curso de Data Science - Jean Carlos</title> <!-- → Título do site -->
-    <link rel="stylesheet" href="style.css"> <!-- → Link do CSS externo -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- → Ícones Font Awesome -->
+<!DOCTYPE html>
+<html lang="pt-BR"> <!-- Define o idioma da página como português brasileiro -->
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade -->
+    <title>Cursos SETEC - Jean Carlos de Souza Vicente</title> <!-- Título do site -->
+    <link rel="stylesheet" href="style.css"> <!-- Link para o CSS externo -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Ícones -->
 </head>
-<body> <!-- → Corpo do site -->
-
-    <!-- Cabeçalho -->
-    <header class="header"> <!-- → Cabeçalho principal -->
-        <div class="container"> <!-- → Container centralizado -->
-            <h1>Curso de Data Science</h1> <!-- → Título principal -->
-            <p><i class="fas fa-user-graduate"></i> Aluno: Jean Carlos de Souza Vicente</p> <!-- → Nome aluno -->
-            <p><i class="fas fa-chalkboard-teacher"></i> Professor: Burzuk Lindo</p> <!-- → Nome professor -->
-            <p><i class="fas fa-university"></i> Instituição: SETEC</p> <!-- → Instituição -->
+<body>
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="container"> <!-- Centraliza conteúdo -->
+            <h1><i class="fas fa-graduation-cap"></i> Cursos Profissionalizantes SETEC</h1> <!-- Título principal -->
+            <div class="info-box"> <!-- Caixa de informações do aluno/professor -->
+                <p><i class="fas fa-user-graduate"></i><strong>Aluno:</strong> Jean Carlos de Souza Vicente</p>
+                <p><i class="fas fa-chalkboard-teacher"></i><strong>Professor:</strong> Burzuk Lindo</p>
+                <p><i class="fas fa-university"></i><strong>Instituição:</strong> SETEC</p>
+                <p><i class="fas fa-calendar-alt"></i><strong>Ano Letivo:</strong> 2025</p>
+            </div>
         </div>
     </header>
 
-    <hr class="divider"> <!-- → Linha dourada separadora -->
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+        <div class="container"> <!-- Container principal -->
 
-    <!-- Seção 1: Sobre o Curso -->
-    <section class="section about-course"> <!-- → Primeira seção -->
-        <div class="container"> <!-- → Container centralizado -->
-            <h2>Sobre o Curso de Data Science</h2> <!-- → Título da seção -->
-            <p>Este curso oferece formação completa em Data Science, incluindo estatística, programação, análise de dados, visualização, machine learning e inteligência artificial.</p> <!-- → Texto descritivo -->
-            <p>O aluno aprenderá a coletar, organizar e interpretar grandes volumes de dados, aplicando modelos preditivos e soluções inteligentes para problemas reais.</p> <!-- → Texto detalhado -->
-            
-            <!-- Área para vídeos -->
-            <div class="video-area"> <!-- → Área de vídeo -->
-                <p>Adicione vídeos aqui sobre o curso</p> <!-- → Placeholder de vídeo -->
-                <!-- Exemplo de vídeo: <iframe width="100%" height="400" src="URL_DO_VIDEO" frameborder="0" allowfullscreen></iframe> -->
-            </div>
+            <!-- SEÇÃO 1: Data Science -->
+            <section class="section">
+                <h2><i class="fas fa-chart-line"></i> Data Science - Ciência de Dados</h2>
+                <p>
+                    Data Science é uma área interdisciplinar que utiliza métodos científicos, algoritmos e sistemas 
+                    para extrair conhecimento de dados estruturados e não estruturados.
+                </p>
+                <p>
+                    O curso aborda estatística, machine learning e visualização de dados, preparando os alunos para criar 
+                    modelos preditivos e insights relevantes.
+                </p>
+                <div class="video-container">
+                    <h3><i class="fas fa-video"></i> Área para Vídeos de Data Science</h3>
+                    <div class="video-placeholder">
+                        <i class="fas fa-play-circle" style="font-size: 3rem; margin-right: 1rem;"></i>
+                        <span>Clique para inserir vídeo sobre Data Science</span>
+                    </div>
+                </div>
+            </section>
 
-            <!-- Área para imagens -->
-            <div class="image-area"> <!-- → Área de imagens -->
-                <p>Adicione imagens ilustrativas aqui</p> <!-- → Placeholder de imagem -->
-                <!-- Exemplo de imagem: <img src="URL_DA_IMAGEM" alt="Descrição"> -->
-            </div>
+            <!-- SEÇÃO 2: Desenvolvimento de Sistemas -->
+            <section class="section">
+                <h2><i class="fas fa-laptop-code"></i> Desenvolvimento de Sistemas</h2>
+                <p>
+                    Desenvolvimento de Sistemas envolve a criação, implementação e manutenção de softwares e aplicações. 
+                    Este curso prepara profissionais para atuar no mercado utilizando tecnologias modernas.
+                </p>
+                <p>
+                    Os alunos aprendem linguagens de programação, frameworks, banco de dados e metodologias ágeis.
+                </p>
+                <div class="video-container">
+                    <h3><i class="fas fa-video"></i> Área para Vídeos de Desenvolvimento</h3>
+                    <div class="video-placeholder">
+                        <i class="fas fa-play-circle" style="font-size: 3rem; margin-right: 1rem;"></i>
+                        <span>Clique para inserir vídeo sobre Desenvolvimento de Sistemas</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEÇÃO 3: Inteligência Artificial -->
+            <section class="section">
+                <h2><i class="fas fa-robot"></i> Inteligência Artificial</h2>
+                <p>
+                    A Inteligência Artificial permite que máquinas realizem tarefas que tradicionalmente requeriam inteligência humana.
+                    Este curso explora fundamentos, machine learning, deep learning e aplicações práticas.
+                </p>
+                <p>
+                    Os alunos desenvolvem sistemas inteligentes capazes de aprender, raciocinar e tomar decisões.
+                </p>
+                <div class="video-grid">
+                    <!-- 4 vídeos simulados -->
+                    <div class="video-item">
+                        <div class="video-placeholder">
+                            <p>Vídeo 1: Introdução à IA</p>
+                        </div>
+                        <h4>Fundamentos da Inteligência Artificial</h4>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-placeholder">
+                            <p>Vídeo 2: Machine Learning</p>
+                        </div>
+                        <h4>Aprendizado de Máquina</h4>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-placeholder">
+                            <p>Vídeo 3: Deep Learning</p>
+                        </div>
+                        <h4>Redes Neurais Profundas</h4>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-placeholder">
+                            <p>Vídeo 4: Processamento de Linguagem Natural</p>
+                        </div>
+                        <h4>PLN e Aplicações</h4>
+                    </div>
+                </div>
+            </section>
+
         </div>
-    </section>
-
-    <hr class="divider"> <!-- → Linha dourada separadora -->
-
-    <!-- Seção 2: Temas de Inteligência Artificial -->
-    <section class="section ai-section"> <!-- → Segunda seção -->
-        <div class="container"> <!-- → Container centralizado -->
-            <h2>Inteligência Artificial</h2> <!-- → Título da seção -->
-            <p>Exploramos os principais tópicos e aplicações práticas de Inteligência Artificial no Data Science moderno.</p> <!-- → Introdução -->
-
-            <!-- Lista de tópicos -->
-            <ul class="ai-list"> <!-- → Lista de tópicos de IA -->
-                <li><i class="fas fa-brain"></i> Machine Learning - 15 vídeos</li> <!-- → Machine Learning -->
-                <li><i class="fas fa-layer-group"></i> Deep Learning - 12 vídeos</li> <!-- → Deep Learning -->
-                <li><i class="fas fa-language"></i> NLP (Processamento de Linguagem Natural) - 10 vídeos</li> <!-- → NLP -->
-                <li><i class="fas fa-eye"></i> Visão Computacional - 8 vídeos</li> <!-- → Visão Computacional -->
-            </ul>
-
-            <!-- Área de vídeos -->
-            <div class="video-area"> <!-- → Área de vídeo de IA -->
-                <p>Adicione vídeos de Inteligência Artificial aqui</p> <!-- → Placeholder -->
-            </div>
-
-            <!-- Área de exemplos -->
-            <div class="examples-area"> <!-- → Área para exemplos -->
-                <p>Adicione imagens ou links de estudos de caso aqui</p> <!-- → Placeholder -->
-            </div>
-        </div>
-    </section>
-
-    <hr class="divider"> <!-- → Linha dourada separadora -->
-
-    <!-- Seção 3: Recursos Futuros -->
-    <section class="section future-section"> <!-- → Terceira seção -->
-        <div class="container"> <!-- → Container centralizado -->
-            <h2>Recursos Futuros na SETEC</h2> <!-- → Título da seção -->
-            <p>A SETEC planeja recursos inovadores, incluindo laboratórios virtuais, mentorias e certificações para alunos.</p> <!-- → Descrição -->
-
-            <!-- Grid de recursos -->
-            <div class="future-grid"> <!-- → Grid de cards -->
-                <div class="future-item"><i class="fas fa-laptop-code"></i> Laboratórios Virtuais</div> <!-- → Item 1 -->
-                <div class="future-item"><i class="fas fa-project-diagram"></i> Projetos Reais</div> <!-- → Item 2 -->
-                <div class="future-item"><i class="fas fa-users"></i> Mentoria Online</div> <!-- → Item 3 -->
-                <div class="future-item"><i class="fas fa-book"></i> Biblioteca Digital</div> <!-- → Item 4 -->
-            </div>
-
-            <!-- Área de vídeos futuros -->
-            <div class="video-area"> <!-- → Placeholder de vídeos -->
-                <p>Adicione vídeos sobre os recursos futuros aqui</p> <!-- → Placeholder -->
-            </div>
-        </div>
-    </section>
-
-    <hr class="divider"> <!-- → Linha dourada separadora -->
-
-    <!-- Rodapé -->
-    <footer class="footer"> <!-- → Rodapé -->
-        <div class="container"> <!-- → Container centralizado -->
-            <p>&copy; 2025 Curso de Data Science - Desenvolvido por Jean Carlos de Souza Vicente</p> <!-- → Direitos autorais -->
-        </div>
-    </footer>
-
+    </main>
 </body>
 </html>
