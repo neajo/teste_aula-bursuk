@@ -4,72 +4,101 @@
     <meta charset="UTF-8"> <!-- → Suporte a caracteres especiais -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- → Responsivo -->
     <title>Curso de Data Science - Jean Carlos</title> <!-- → Título do site -->
-    <link rel="stylesheet" href="style.css"> <!-- → Importa CSS externo -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- → Ícones Font Awesome -->
+    <link rel="stylesheet" href="style.css"> <!-- → Link do CSS externo -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- → Font Awesome -->
 </head>
 <body> <!-- → Corpo do site -->
 
-    <!-- Cabeçalho principal -->
-    <header class="header"> <!-- → Header do site -->
+    <!-- Cabeçalho -->
+    <header class="header"> <!-- → Cabeçalho principal -->
         <div class="container"> <!-- → Container centralizado -->
             <h1>Curso de Data Science</h1> <!-- → Título principal -->
-            <p><i class="fas fa-user-graduate"></i> Aluno: Jean Carlos de Souza Vicente</p> <!-- → Nome do aluno -->
-            <p><i class="fas fa-chalkboard-teacher"></i> Professor: Burzuk Lindo</p> <!-- → Nome do professor -->
+            <p><i class="fas fa-user-graduate"></i> Aluno: Jean Carlos de Souza Vicente</p> <!-- → Nome aluno -->
+            <p><i class="fas fa-chalkboard-teacher"></i> Professor: Burzuk Lindo</p> <!-- → Nome professor -->
             <p><i class="fas fa-university"></i> Instituição: SETEC</p> <!-- → Instituição -->
         </div>
     </header>
 
-    <!-- Primeira Seção: Sobre o Curso -->
+    <hr class="divider"> <!-- → Linha dourada separadora -->
+
+    <!-- Seção 1: Sobre o Curso -->
     <section class="section about-course"> <!-- → Primeira seção -->
         <div class="container">
             <h2>Sobre o Curso de Data Science</h2> <!-- → Título da seção -->
-            <p>O curso de Data Science oferece uma formação completa, capacitando o aluno a analisar dados, aplicar técnicas de estatística, machine learning e inteligência artificial para resolver problemas reais.</p> <!-- → Descrição -->
-            <div class="video-area"> <!-- → Área de vídeo -->
-                <!-- Exemplo de vídeo -->
-                <!-- <iframe width="100%" height="300" src="URL_DO_VIDEO" frameborder="0" allowfullscreen></iframe> -->
-                <p>Espaço para vídeo do curso</p> <!-- → Placeholder -->
+            <p>Este curso fornece uma formação completa em Data Science, abrangendo estatística, programação, análise de dados, visualização, machine learning e inteligência artificial.</p> <!-- → Texto explicativo -->
+            <p>O aluno aprenderá a coletar, organizar e interpretar grandes volumes de dados, aplicando modelos preditivos e soluções inteligentes para problemas reais.</p> <!-- → Texto detalhado -->
+            
+            <!-- Área para vídeos -->
+            <div class="video-area"> <!-- → Placeholder de vídeo -->
+                <p>Adicione vídeos aqui sobre o curso</p> <!-- → Texto temporário -->
+                <!-- Exemplo de vídeo: <iframe width="100%" height="400" src="URL_DO_VIDEO" frameborder="0" allowfullscreen></iframe> -->
+            </div>
+
+            <!-- Área para imagens -->
+            <div class="image-area"> <!-- → Placeholder para imagens -->
+                <p>Adicione imagens ilustrativas aqui</p> <!-- → Texto temporário -->
+                <!-- Exemplo de imagem: <img src="URL_DA_IMAGEM" alt="Descrição"> -->
             </div>
         </div>
     </section>
 
-    <!-- Segunda Seção: Inteligência Artificial -->
+    <hr class="divider"> <!-- → Linha dourada separadora -->
+
+    <!-- Seção 2: Temas de Inteligência Artificial -->
     <section class="section ai-section"> <!-- → Segunda seção -->
         <div class="container">
-            <h2>Temas de Inteligência Artificial</h2> <!-- → Título da seção -->
-            <p>O curso aborda diversos temas fundamentais de IA, cada um com vídeos explicativos e exercícios práticos.</p> <!-- → Introdução -->
-            <ul class="ai-list"> <!-- → Lista de temas -->
+            <h2>Inteligência Artificial</h2> <!-- → Título da seção -->
+            <p>A Inteligência Artificial é uma das áreas centrais do Data Science. Aqui exploramos os principais tópicos e aplicações práticas.</p> <!-- → Introdução -->
+            
+            <!-- Lista de temas -->
+            <ul class="ai-list"> <!-- → Lista de IA -->
                 <li><i class="fas fa-brain"></i> Machine Learning - 15 vídeos</li> <!-- → Tema ML -->
                 <li><i class="fas fa-layer-group"></i> Deep Learning - 12 vídeos</li> <!-- → Tema DL -->
                 <li><i class="fas fa-language"></i> NLP (Processamento de Linguagem Natural) - 10 vídeos</li> <!-- → Tema NLP -->
                 <li><i class="fas fa-eye"></i> Visão Computacional - 8 vídeos</li> <!-- → Tema CV -->
             </ul>
-            <div class="video-area"> <!-- → Área para vídeos de IA -->
-                <p>Espaço para vídeos de Inteligência Artificial</p> <!-- → Placeholder -->
+
+            <!-- Vídeos de IA -->
+            <div class="video-area"> <!-- → Placeholder de vídeo -->
+                <p>Adicione vídeos de Inteligência Artificial</p>
+            </div>
+
+            <!-- Exemplos ou estudos de caso -->
+            <div class="examples-area"> <!-- → Área para exemplos -->
+                <p>Adicione imagens ou links de estudos de caso aqui</p>
             </div>
         </div>
     </section>
 
-    <!-- Terceira Seção: Recursos Futuros -->
+    <hr class="divider"> <!-- → Linha dourada separadora -->
+
+    <!-- Seção 3: Recursos Futuros SETEC -->
     <section class="section future-section"> <!-- → Terceira seção -->
         <div class="container">
             <h2>Recursos Futuros na SETEC</h2> <!-- → Título da seção -->
-            <p>A SETEC está constantemente evoluindo e planejando novos recursos para melhorar a experiência de aprendizagem dos alunos.</p> <!-- → Descrição -->
-            <div class="future-grid"> <!-- → Grid de recursos -->
+            <p>A SETEC está constantemente inovando, preparando recursos digitais, laboratórios virtuais, mentorias e certificações para os alunos.</p> <!-- → Introdução -->
+
+            <!-- Grid de recursos -->
+            <div class="future-grid"> <!-- → Grid de cards -->
                 <div class="future-item"><i class="fas fa-laptop-code"></i> Laboratórios Virtuais</div> <!-- → Item 1 -->
                 <div class="future-item"><i class="fas fa-project-diagram"></i> Projetos Reais</div> <!-- → Item 2 -->
                 <div class="future-item"><i class="fas fa-users"></i> Mentoria Online</div> <!-- → Item 3 -->
                 <div class="future-item"><i class="fas fa-book"></i> Biblioteca Digital</div> <!-- → Item 4 -->
             </div>
-            <div class="video-area"> <!-- → Área para vídeos futuros -->
-                <p>Espaço para vídeos futuros</p> <!-- → Placeholder -->
+
+            <!-- Vídeos futuros -->
+            <div class="video-area"> <!-- → Placeholder de vídeo -->
+                <p>Adicione vídeos sobre os recursos futuros</p>
             </div>
         </div>
     </section>
 
+    <hr class="divider"> <!-- → Linha dourada separadora -->
+
     <!-- Rodapé -->
-    <footer class="footer"> <!-- → Rodapé do site -->
+    <footer class="footer"> <!-- → Rodapé -->
         <div class="container">
-            <p>&copy; 2025 Curso de Data Science - Desenvolvido por Jean Carlos de Souza Vicente</p> <!-- → Direitos -->
+            <p>&copy; 2025 Curso de Data Science - Desenvolvido por Jean Carlos de Souza Vicente</p> <!-- → Texto rodapé -->
         </div>
     </footer>
 
