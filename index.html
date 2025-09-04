@@ -1,109 +1,323 @@
 <!DOCTYPE html>
-<html lang="pt-BR"> <!-- Define o idioma da página como português brasileiro -->
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8"> <!-- Define a codificação UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade -->
-    <title>Cursos SETEC - Jean Carlos de Souza Vicente</title> <!-- Título do site -->
-    <link rel="stylesheet" href="style.css"> <!-- Link para o CSS externo -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Ícones -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Desenvolvimento de Sistemas com IA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ===== ESTILOS GERAIS ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* ===== CABEÇALHO ===== */
+        header {
+            background: linear-gradient(135deg, #2c3e50, #1a1a2e);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* ===== SEÇÃO ===== */
+        section {
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+            font-size: 2rem;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #3498db;
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+        
+        /* ===== PRIMEIRA SEÇÃO - SOBRE O CURSO ===== */
+        #sobre {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin: 2rem auto;
+        }
+        
+        .curso-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .curso-texto {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .curso-imagem {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .curso-imagem img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* ===== SEGUNDA SEÇÃO - TÓPICOS DE IA ===== */
+        #ia-topicos {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin: 2rem auto;
+        }
+        
+        .videos-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        
+        .video-wrapper {
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .video-wrapper:hover {
+            transform: translateY(-5px);
+        }
+        
+        .video-wrapper iframe {
+            width: 100%;
+            height: 180px;
+            border: none;
+        }
+        
+        .video-info {
+            padding: 15px;
+            background: white;
+        }
+        
+        .video-info h3 {
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+        
+        .video-info p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .videos-qtd {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+        
+        /* ===== TERCEIRA SEÇÃO - SETEC ===== */
+        #futuro-setec {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin: 2rem auto;
+        }
+        
+        .setec-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .setec-logo {
+            max-width: 200px;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* ===== RODAPÉ ===== */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        footer p {
+            margin-bottom: 1rem;
+        }
+        
+        .social-icons {
+            margin-top: 1rem;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: #3498db;
+        }
+        
+        /* ===== RESPONSIVIDADE ===== */
+        @media (max-width: 768px) {
+            .curso-content {
+                flex-direction: column;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .videos-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .video-wrapper {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- CABEÇALHO -->
+    <!-- Cabeçalho da página -->
     <header>
-        <div class="container"> <!-- Centraliza conteúdo -->
-            <h1><i class="fas fa-graduation-cap"></i> Cursos Profissionalizantes SETEC</h1> <!-- Título principal -->
-            <div class="info-box"> <!-- Caixa de informações do aluno/professor -->
-                <p><i class="fas fa-user-graduate"></i><strong>Aluno:</strong> Jean Carlos de Souza Vicente</p>
-                <p><i class="fas fa-chalkboard-teacher"></i><strong>Professor:</strong> Burzuk Lindo</p>
-                <p><i class="fas fa-university"></i><strong>Instituição:</strong> SETEC</p>
-                <p><i class="fas fa-calendar-alt"></i><strong>Ano Letivo:</strong> 2025</p>
+        <h1>Curso de Desenvolvimento de Sistemas</h1>
+        <p>Preparando os profissionais do futuro para o mercado de tecnologia</p>
+    </header>
+    
+    <!-- Primeira seção: Sobre o curso -->
+    <section id="sobre">
+        <h2 class="section-title">Sobre o Curso</h2>
+        <div class="curso-content">
+            <div class="curso-texto">
+                <p>O curso de Desenvolvimento de Sistemas prepara os estudantes para atuarem no desenvolvimento de soluções tecnológicas inovadoras, combinando conhecimentos de programação, banco de dados e desenvolvimento web.</p>
+                <p>Com uma abordagem prática e atualizada, o curso oferece aos alunos a oportunidade de trabalhar com as ferramentas e tecnologias mais recentes do mercado, preparando-os para os desafios da indústria 4.0.</p>
+                <p>Os profissionais formados neste curso estarão aptos a desenvolver sistemas web e mobile, implementar bancos de dados, criar soluções baseadas em dados e muito mais.</p>
+            </div>
+            <div class="curso-imagem">
+                <img src="https://placehold.co/600x400/3498db/ffffff?text=Desenvolvimento+de+Sistemas" alt="Imagem representando o curso de Desenvolvimento de Sistemas">
             </div>
         </div>
-    </header>
-
-    <!-- CONTEÚDO PRINCIPAL -->
-    <main>
-        <div class="container"> <!-- Container principal -->
-
-            <!-- SEÇÃO 1: Data Science -->
-            <section class="section">
-                <h2><i class="fas fa-chart-line"></i> Data Science - Ciência de Dados</h2>
-                <p>
-                    Data Science é uma área interdisciplinar que utiliza métodos científicos, algoritmos e sistemas 
-                    para extrair conhecimento de dados estruturados e não estruturados.
-                </p>
-                <p>
-                    O curso aborda estatística, machine learning e visualização de dados, preparando os alunos para criar 
-                    modelos preditivos e insights relevantes.
-                </p>
-                <div class="video-container">
-                    <h3><i class="fas fa-video"></i> Área para Vídeos de Data Science</h3>
-                    <div class="video-placeholder">
-                        <i class="fas fa-play-circle" style="font-size: 3rem; margin-right: 1rem;"></i>
-                        <span>Clique para inserir vídeo sobre Data Science</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- SEÇÃO 2: Desenvolvimento de Sistemas -->
-            <section class="section">
-                <h2><i class="fas fa-laptop-code"></i> Desenvolvimento de Sistemas</h2>
-                <p>
-                    Desenvolvimento de Sistemas envolve a criação, implementação e manutenção de softwares e aplicações. 
-                    Este curso prepara profissionais para atuar no mercado utilizando tecnologias modernas.
-                </p>
-                <p>
-                    Os alunos aprendem linguagens de programação, frameworks, banco de dados e metodologias ágeis.
-                </p>
-                <div class="video-container">
-                    <h3><i class="fas fa-video"></i> Área para Vídeos de Desenvolvimento</h3>
-                    <div class="video-placeholder">
-                        <i class="fas fa-play-circle" style="font-size: 3rem; margin-right: 1rem;"></i>
-                        <span>Clique para inserir vídeo sobre Desenvolvimento de Sistemas</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- SEÇÃO 3: Inteligência Artificial -->
-            <section class="section">
-                <h2><i class="fas fa-robot"></i> Inteligência Artificial</h2>
-                <p>
-                    A Inteligência Artificial permite que máquinas realizem tarefas que tradicionalmente requeriam inteligência humana.
-                    Este curso explora fundamentos, machine learning, deep learning e aplicações práticas.
-                </p>
-                <p>
-                    Os alunos desenvolvem sistemas inteligentes capazes de aprender, raciocinar e tomar decisões.
-                </p>
-                <div class="video-grid">
-                    <!-- 4 vídeos simulados -->
-                    <div class="video-item">
-                        <div class="video-placeholder">
-                            <p>Vídeo 1: Introdução à IA</p>
-                        </div>
-                        <h4>Fundamentos da Inteligência Artificial</h4>
-                    </div>
-                    <div class="video-item">
-                        <div class="video-placeholder">
-                            <p>Vídeo 2: Machine Learning</p>
-                        </div>
-                        <h4>Aprendizado de Máquina</h4>
-                    </div>
-                    <div class="video-item">
-                        <div class="video-placeholder">
-                            <p>Vídeo 3: Deep Learning</p>
-                        </div>
-                        <h4>Redes Neurais Profundas</h4>
-                    </div>
-                    <div class="video-item">
-                        <div class="video-placeholder">
-                            <p>Vídeo 4: Processamento de Linguagem Natural</p>
-                        </div>
-                        <h4>PLN e Aplicações</h4>
-                    </div>
-                </div>
-            </section>
-
+    </section>
+    
+    <!-- Segunda seção: Inteligência Artificial com os vídeos solicitados -->
+    <section id="ia-topicos">
+        <h2 class="section-title">Inteligência Artificial no Curso de DS</h2>
+        <div class="curso-texto">
+            <p>A Inteligência Artificial é uma das áreas mais promissoras da tecnologia atual, e o curso de Desenvolvimento de Sistemas prepara os alunos para dominar os conceitos e aplicações práticas de IA.</p>
+            <p>Os estudantes aprendem desde os fundamentos até as técnicas mais avançadas, com foco na implementação de soluções reais para problemas do mundo real.</p>
         </div>
-    </main>
+
+        <!-- Container com os 4 vídeos solicitados -->
+        <div class="videos-container">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/CmAcro8YblU" title="Inteligência Artificial: O Que É e Como Funciona" allowfullscreen></iframe>
+                <div class="video-info">
+                    <h3>O Que É IA</h3>
+                    <p>Entenda os conceitos fundamentais da Inteligência Artificial.</p>
+                    <span class="videos-qtd">5 vídeos</span>
+                </div>
+            </div>
+            
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/HNBtdyMjxKU" title="Inteligência Artificial e Seus Impactos na Sociedade" allowfullscreen></iframe>
+                <div class="video-info">
+                    <h3>Impactos da IA</h3>
+                    <p>Como a IA está transformando a sociedade e o mercado de trabalho.</p>
+                    <span class="videos-qtd">8 vídeos</span>
+                </div>
+            </div>
+            
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/V2POyQVQuzA" title="Machine Learning: Como a Máquina Aprende Sozinha" allowfullscreen></iframe>
+                <div class="video-info">
+                    <h3>Machine Learning</h3>
+                    <p>Os fundamentos do aprendizado de máquina e suas aplicações.</p>
+                    <span class="videos-qtd">7 vídeos</span>
+                </div>
+            </div>
+            
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/D2KIu_yDeJk" title="Redes Neurais: Como Funciona a Base da IA" allowfullscreen></iframe>
+                <div class="video-info">
+                    <h3>Redes Neurais</h3>
+                    <p>Compreenda o funcionamento das redes neurais artificiais.</p>
+                    <span class="videos-qtd">6 vídeos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Terceira seção: Futuro relacionado à SETEC -->
+    <section id="futuro-setec">
+        <h2 class="section-title">Futuro Relacionado à SETEC</h2>
+        <div class="setec-content">
+            <img src="https://placehold.co/200x100/2c3e50/ffffff?text=SETEC" alt="Logo SETEC" class="setec-logo">
+            <p>A Secretaria de Educação Profissional e Tecnológica (SETEC) tem um papel fundamental na expansão e consolidação dos cursos de tecnologia no Brasil, incluindo o curso de Desenvolvimento de Sistemas.</p>
+            <p>No futuro, espera-se que a SETEC continue fomentando a integração entre educação e mercado de trabalho, atualizando constantemente as diretrizes curriculares para acompanhar as rápidas transformações tecnológicas.</p>
+            <p>Além disso, a SETEC tem potencial para promover parcerias entre instituições de ensino e empresas do setor de tecnologia, criando oportunidades de estágio, projetos conjuntos e empregabilidade para os estudantes.</p>
+        </div>
+    </section>
+    
+    <!-- Rodapé da página -->
+    <footer>
+        <p>Curso de Desenvolvimento de Sistemas</p>
+        <p>© 2023 - Todos os direitos reservados</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
 </body>
 </html>
