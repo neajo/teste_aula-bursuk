@@ -1,138 +1,119 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* { margin: 0; /* zera margens */
+    padding: 0; /* zera espaçamentos */
+    box-sizing: border-box; /* mantém layout previsível */ }
+
+body { font-family: 'Segoe UI', Tahoma, sans-serif; /* fonte moderna */
+    line-height: 1.6; /* altura das linhas */
+    color: #fff; /* texto branco */
+    background: #000; /* fundo preto */
+    perspective: 1000px; /* ativa perspectiva 3D */ }
+
+.container { max-width: 1200px; /* largura máxima */
+    margin: 0 auto; /* centraliza */
+    padding: 0 20px; /* espaçamento lateral */ }
+
+header { background: #000; /* fundo preto */
+    color: #0ff; /* azul neon */
+    padding: 2rem 0; /* espaçamento interno */
+    text-align: center; /* centraliza */
+    border-bottom: 2px solid #0ff; /* linha neon */
+    text-shadow: 0 0 5px #0ff, 0 0 20px #0ff, 0 0 40px #0ff; /* efeito neon 3D */
+    animation: pulseNeon 3s infinite alternate; /* brilho pulsante */ }
+
+h1 { font-size: 2.5rem; /* tamanho grande */
+    margin-bottom: 0.5rem; /* espaço abaixo */
+    transform: rotateX(10deg); /* inclinação 3D leve */ }
+
+.info { background: rgba(255,255,255,0.05); /* translúcido */
+    padding: 1rem; /* espaçamento interno */
+    border-radius: 8px; /* arredondado */
+    margin-top: 1rem; /* espaço acima */
+    border: 1px solid #0ff; /* borda neon */
+    text-shadow: 0 0 10px #0ff; /* brilho */
+    transform: rotateY(5deg); /* leve rotação 3D */ }
+
+.section { background: #111; /* fundo escuro */
+    margin: 2rem 0; /* espaçamento */
+    padding: 2rem; /* espaçamento */
+    border-radius: 12px; /* arredondado */
+    box-shadow: 0 0 20px rgba(0,255,255,0.3); /* brilho */
+    border: 1px solid #0ff; /* borda neon */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* animação suave */
+    transform-style: preserve-3d; /* ativa 3D interno */ }
+
+.section:hover { transform: rotateX(10deg) rotateY(-10deg) scale(1.05); /* gira e aumenta */
+    box-shadow: 0 0 30px #0ff, 0 0 60px #0ff; /* brilho mais forte */ }
+
+.section h2 { color: #0ff; /* neon azul */
+    margin-bottom: 1.5rem; /* espaço */
+    text-shadow: 0 0 10px #0ff, 0 0 25px #0ff; /* brilho */ }
+
+.section p { margin-bottom: 1.5rem; /* espaçamento */
+    color: #ccc; /* cinza claro */ }
+
+.ai-topics { display: grid; /* grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* colunas flexíveis */
+    gap: 1rem; /* espaçamento */ }
+
+.topic { background: #000; /* fundo preto */
+    padding: 1rem; /* espaçamento */
+    border-left: 4px solid #0ff; /* barra neon */
+    border-radius: 8px; /* arredondado */
+    transition: 0.3s; /* suave */
+    box-shadow: 0 0 15px rgba(0,255,255,0.4); /* brilho */ }
+
+.topic:hover { transform: rotateY(10deg) scale(1.05); /* inclina e aumenta */
+    box-shadow: 0 0 20px #0ff, 0 0 40px #0ff; /* brilho forte */ }
+
+.video-count { background: #0ff; /* fundo neon */
+    color: #000; /* texto preto */
+    padding: 0.3rem 0.6rem; /* espaçamento */
+    border-radius: 20px; /* pílula */
+    font-size: 0.9rem; /* pequeno */
+    font-weight: bold; /* negrito */
+    box-shadow: 0 0 10px #0ff, 0 0 30px #0ff; /* neon glow */ }
+
+.video-section { margin-top: 2rem; /* espaço */
+    background: #000; /* preto */
+    padding: 1rem; /* espaçamento */
+    border: 2px dashed #0ff; /* tracejado neon */
+    border-radius: 8px; /* arredondado */
+    text-align: center; /* centraliza */
+    color: #0ff; /* azul neon */
+    animation: fadeInUp 1.2s ease; /* animação de entrada */ }
+
+.future-resources { display: grid; /* grid */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* colunas responsivas */
+    gap: 1rem; /* espaçamento */
+    margin-top: 2rem; /* espaço */ }
+
+.resource-item { background: #000; /* fundo preto */
+    color: #0ff; /* neon */
+    padding: 1rem; /* espaçamento */
+    border-radius: 8px; /* arredondado */
+    border: 1px solid #0ff; /* borda neon */
+    text-align: center; /* centralizado */
+    transition: 0.4s; /* suave */
+    box-shadow: 0 0 15px rgba(0,255,255,0.4); /* brilho */ }
+
+.resource-item:hover { transform: rotateX(15deg) rotateY(10deg) scale(1.05); /* inclinação 3D */
+    box-shadow: 0 0 30px #0ff, 0 0 60px #0ff; /* brilho forte */ }
+
+footer { background: #000; /* preto */
+    color: #0ff; /* neon */
+    text-align: center; /* centraliza */
+    padding: 2rem 0; /* espaçamento */
+    margin-top: 3rem; /* espaço acima */
+    border-top: 2px solid #0ff; /* linha neon */
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff; /* brilho */ }
+
+/* --- ANIMAÇÕES KEYFRAMES --- */
+@keyframes pulseNeon {
+    0% { text-shadow: 0 0 5px #0ff, 0 0 15px #0ff; }
+    100% { text-shadow: 0 0 20px #0ff, 0 0 60px #0ff; }
 }
 
-/* Corpo */
-body {
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background: #f8f9fa;
-}
-
-/* Container central */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Cabeçalho */
-header {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: #fff;
-    padding: 2rem 0;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
-
-/* Info */
-.info {
-    background: rgba(255,255,255,0.1);
-    padding: 1rem;
-    border-radius: 8px;
-    margin-top: 1rem;
-    backdrop-filter: blur(10px);
-}
-
-/* Seções */
-.section {
-    background: #fff;
-    margin: 2rem 0;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    transition: 0.3s;
-}
-
-.section:hover {
-    transform: translateY(-5px);
-}
-
-/* Títulos */
-.section h2 {
-    color: #667eea;
-    margin-bottom: 1.5rem;
-}
-
-/* Texto */
-.section p {
-    margin-bottom: 1.5rem;
-    color: #555;
-}
-
-/* Grid de tópicos */
-.ai-topics {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-}
-
-/* Tópico */
-.topic {
-    background: #f9f9f9;
-    padding: 1rem;
-    border-left: 4px solid #667eea;
-    border-radius: 8px;
-    transition: 0.3s;
-}
-
-.topic:hover {
-    transform: scale(1.02);
-}
-
-/* Contagem de vídeos */
-.video-count {
-    background: #667eea;
-    color: #fff;
-    padding: 0.3rem 0.6rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-}
-
-/* Vídeo */
-.video-section {
-    margin-top: 2rem;
-    background: #f8f9fa;
-    padding: 1rem;
-    border: 2px dashed #ddd;
-    border-radius: 8px;
-    text-align: center;
-}
-
-/* Futuro */
-.future-resources {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-top: 2rem;
-}
-
-.resource-item {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: #fff;
-    padding: 1rem;
-    border-radius: 8px;
-    transition: 0.3s;
-}
-
-.resource-item:hover {
-    transform: translateY(-3px);
-}
-
-/* Rodapé */
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 2rem 0;
-    margin-top: 3rem;
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
 }
