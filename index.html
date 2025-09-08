@@ -1,245 +1,121 @@
 <!DOCTYPE html>
-<!-- Declaração do tipo de documento - indica que é um documento HTML5 -->
-<html lang="pt-BR">
-<!-- Elemento raiz do documento, define o idioma como português brasileiro -->
+<html lang="pt-BR"> <!-- Define o idioma da página como Português do Brasil -->
 <head>
-<!-- Seção de cabeçalho - contém metadados e informações sobre o documento -->
-<meta charset="UTF-8">
-<!-- Define a codificação de caracteres como UTF-8 para suportar caracteres especiais e acentos -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Configura a viewport para layouts responsivos em dispositivos móveis -->
+<meta charset="UTF-8"> <!-- Codificação de caracteres como UTF-8, compatível com caracteres especiais -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define que a página é responsiva e se adapta a diferentes tamanhos de tela -->
 <title>Curso de Desenvolvimento de Sistemas com IA</title>
-<!-- Define o título da página que aparece na aba do navegador -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css  ">
-<!-- Importa a biblioteca Font Awesome para usar ícones -->
-<link rel="stylesheet" href="style.css">
-<!-- Link para um arquivo CSS externo com estilos personalizados -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!-- Importa os ícones da Font Awesome -->
+<link rel="stylesheet" href="style.css"> <!-- Importa o arquivo CSS externo com os estilos da página -->
 </head>
-<!-- Fim da seção head -->
 <body>
-<!-- Corpo do documento - contém todo o conteúdo visível da página -->
     <!-- FUNDO ANIMADO -->
-    <div class="universe"></div>
-    <!-- Div que servirá como container para o fundo animado com estrelas (será preenchido via JavaScript) -->
+    <div class="universe"></div> <!-- Container onde as "estrelas" animadas serão adicionadas via JavaScript -->
 
     <!-- Cabeçalho da página -->
     <header>
-    <!-- Tag semântica para o cabeçalho da página -->
-        <h1>Curso de Desenvolvimento de Sistemas</h1>
-        <!-- Título principal da página -->
-        <p>Preparando os profissionais do futuro para o mercado de tecnologia</p>
-        <!-- Parágrafo com descrição do curso -->
-        <p><strong>Aluno Destaque:</strong> Burzuk – Jean Carlos de Souza</p>
-        <!-- Parágrafo com destaque para um aluno específico, usando strong para negrito -->
+        <h1>Curso de Desenvolvimento de Sistemas</h1> <!-- Título principal -->
+        <p>Preparando os profissionais do futuro para o mercado de tecnologia</p> <!-- Subtítulo -->
+        <p><strong>Aluno Destaque:</strong> Burzuk – Jean Carlos de Souza</p> <!-- Destaque para aluno -->
     </header>
-    <!-- Fim do cabeçalho -->
 
     <!-- Primeira seção: Sobre o curso -->
     <section id="sobre">
-    <!-- Define uma seção com ID "sobre" para permitir navegação por âncora -->
-        <h2 class="section-title">Sobre o Curso</h2>
-        <!-- Título da seção com classe para estilização -->
-        <div class="curso-content">
-        <!-- Container para organizar o conteúdo da seção em layout flexível -->
-            <div class="curso-texto">
-            <!-- Div para o conteúdo textual -->
+        <h2 class="section-title">Sobre o Curso</h2> <!-- Título da seção -->
+        <div class="curso-content"> <!-- Container para organizar texto e imagem lado a lado -->
+            <div class="curso-texto"> <!-- Bloco de texto -->
+                <!-- Parágrafos explicativos sobre o conteúdo e objetivos do curso -->
                 <p>O curso de Desenvolvimento de Sistemas prepara os estudantes para atuarem no desenvolvimento de soluções tecnológicas inovadoras, combinando conhecimentos de programação, banco de dados e desenvolvimento web.</p>
-                <!-- Primeiro parágrafo descritivo sobre o curso -->
                 <p>Com uma abordagem prática e atualizada, o curso oferece aos alunos a oportunidade de trabalhar com as ferramentas e tecnologias mais recentes do mercado, preparando-os para os desafios da indústria 4.0.</p>
-                <!-- Segundo parágrafo descritivo sobre o curso -->
                 <p>Os profissionais formados neste curso estarão aptos a desenvolver sistemas web e mobile, implementar bancos de dados, criar soluções baseadas em dados e muito mais.</p>
-                <!-- Terceiro parágrafo descritivo sobre o curso -->
                 <p>Além disso, os alunos são incentivados a participar de projetos especiais e competições de programação, ampliando suas habilidades técnicas e seu raciocínio lógico.</p>
-                <!-- Quarto parágrafo descritivo sobre o curso -->
                 <p>O desenvolvimento de soft skills, como trabalho em equipe, criatividade e capacidade de resolver problemas complexos, também é prioridade do curso, preparando verdadeiros profissionais completos.</p>
-                <!-- Quinto parágrafo descritivo sobre o curso -->
             </div>
-            <!-- Fim da div de texto -->
-            <div class="curso-imagem">
-            <!-- Div para a imagem do curso -->
-                <img src="https://placehold.co/600x400/000000/ffffff?text=Desenvolvimento+de+Sistemas" alt="Imagem representando o curso de Desenvolvimento de Sistemas">
-                <!-- Imagem placeholder com texto alternativo para acessibilidade -->
+            <div class="curso-imagem"> <!-- Bloco de imagem -->
+                <img src="https://placehold.co/600x400/000000/ffffff?text=Desenvolvimento+de+Sistemas" alt="Imagem representando o curso de Desenvolvimento de Sistemas"> <!-- Imagem ilustrativa do curso -->
             </div>
-            <!-- Fim da div da imagem -->
         </div>
-        <!-- Fim do container de conteúdo -->
     </section>
-    <!-- Fim da seção sobre -->
 
     <!-- Segunda seção: Inteligência Artificial -->
     <section id="ia-topicos">
-    <!-- Define uma seção com ID "ia-topicos" para navegação por âncora -->
-        <h2 class="section-title">Inteligência Artificial no Curso de DS</h2>
-        <!-- Título da seção -->
+        <h2 class="section-title">Inteligência Artificial no Curso de DS</h2> <!-- Título da seção -->
         <div class="curso-texto">
-        <!-- Div para o conteúdo textual -->
+            <!-- Parágrafos explicando como a IA é abordada no curso -->
             <p>A Inteligência Artificial é uma das áreas mais promissoras da tecnologia atual, e o curso de Desenvolvimento de Sistemas prepara os alunos para dominar os conceitos e aplicações práticas de IA.</p>
-            <!-- Primeiro parágrafo sobre IA no curso -->
             <p>Os estudantes aprendem desde os fundamentos até as técnicas mais avançadas, com foco na implementação de soluções reais para problemas do mundo real.</p>
-            <!-- Segundo parágrafo sobre IA no curso -->
             <p>Durante o curso, os alunos exploram algoritmos de aprendizado de máquina, redes neurais e análise de grandes volumes de dados, desenvolvendo projetos que simulam cenários do mercado de trabalho.</p>
-            <!-- Terceiro parágrafo sobre IA no curso -->
             <p>Burzuk – Jean Carlos de Souza é um exemplo de dedicação, aplicando suas habilidades em projetos inovadores que envolvem visão computacional, processamento de linguagem natural e sistemas inteligentes.</p>
-            <!-- Quarto parágrafo destacando um aluno específico -->
             <p>O curso também incentiva a participação em hackathons e workshops de IA, promovendo a troca de experiências e fortalecendo a capacidade de criação de soluções originais.</p>
-            <!-- Quinto parágrafo sobre atividades extracurriculares -->
         </div>
-        <!-- Fim da div de texto -->
 
-        <div class="videos-container">
-        <!-- Container para os vídeos sobre IA -->
+        <div class="videos-container"> <!-- Container geral dos vídeos -->
+            <!-- Bloco individual de vídeo -->
             <div class="video-wrapper">
-            <!-- Wrapper para cada vídeo individual -->
-                <iframe src="https://www.youtube.com/embed/CmAcro8YblU  " title="Inteligência Artificial: O Que É e Como Funciona" allowfullscreen></iframe>
-                <!-- Incorpora vídeo do YouTube com título e permissão para tela cheia -->
-                <div class="video-info">
-                <!-- Div com informações sobre o vídeo -->
+                <iframe src="https://www.youtube.com/embed/CmAcro8YblU" title="Inteligência Artificial: O Que É e Como Funciona" allowfullscreen></iframe> <!-- Vídeo incorporado do YouTube -->
+                <div class="video-info"> <!-- Informações sobre o vídeo -->
                     <h3>O Que É IA</h3>
-                    <!-- Título do vídeo -->
                     <p>Entenda os conceitos fundamentais da Inteligência Artificial e como ela transforma diferentes setores da indústria e da sociedade.</p>
-                    <!-- Descrição do conteúdo do vídeo -->
-                    <span class="videos-qtd">5 vídeos</span>
-                    <!-- Span indicando a quantidade de vídeos nesta seção -->
+                    <span class="videos-qtd">5 vídeos</span> <!-- Quantidade de vídeos relacionados -->
                 </div>
-                <!-- Fim das informações do vídeo -->
             </div>
-            <!-- Fim do wrapper do primeiro vídeo -->
 
+            <!-- Outro vídeo -->
             <div class="video-wrapper">
-            <!-- Wrapper para o segundo vídeo -->
-                <iframe src="https://www.youtube.com/embed/HNBtdyMjxKU  " title="Inteligência Artificial e Seus Impactos na Sociedade" allowfullscreen></iframe>
-                <!-- Incorpora o segundo vídeo do YouTube -->
+                <iframe src="https://www.youtube.com/embed/HNBtdyMjxKU" title="Inteligência Artificial e Seus Impactos na Sociedade" allowfullscreen></iframe>
                 <div class="video-info">
-                <!-- Informações do segundo vídeo -->
                     <h3>Impactos da IA</h3>
-                    <!-- Título do segundo vídeo -->
                     <p>Como a IA está transformando a sociedade, mudando a forma como trabalhamos, aprendemos e nos comunicamos, e seu impacto ético e econômico.</p>
-                    <!-- Descrição do conteúdo do segundo vídeo -->
                     <span class="videos-qtd">8 vídeos</span>
-                    <!-- Quantidade de vídeos nesta seção -->
                 </div>
-                <!-- Fim informações do segundo vídeo -->
             </div>
-            <!-- Fim wrapper do segundo vídeo -->
 
+            <!-- Outro vídeo -->
             <div class="video-wrapper">
-            <!-- Wrapper para o terceiro vídeo -->
-                <iframe src="https://www.youtube.com/embed/V2POyQVQuzA  " title="Machine Learning: Como a Máquina Aprende Sozinha" allowfullscreen></iframe>
-                <!-- Incorpora o terceiro vídeo do YouTube -->
+                <iframe src="https://www.youtube.com/embed/V2POyQVQuzA" title="Machine Learning: Como a Máquina Aprende Sozinha" allowfullscreen></iframe>
                 <div class="video-info">
-                <!-- Informações do terceiro vídeo -->
                     <h3>Machine Learning</h3>
-                    <!-- Título do terceiro vídeo -->
                     <p>Os fundamentos do aprendizado de máquina, suas aplicações práticas e como Burzuk – Jean Carlos de Souza aplica esses conhecimentos em projetos reais.</p>
-                    <!-- Descrição do conteúdo do terceiro vídeo -->
                     <span class="videos-qtd">7 vídeos</span>
-                    <!-- Quantidade de vídeos nesta seção -->
                 </div>
-                <!-- Fim informações do terceiro vídeo -->
             </div>
-            <!-- Fim wrapper do terceiro vídeo -->
 
+            <!-- Outro vídeo -->
             <div class="video-wrapper">
-            <!-- Wrapper para o quarto vídeo -->
-                <iframe src="https://www.youtube.com/embed/D2KIu_yDeJk  " title="Redes Neurais: Como Funciona a Base da IA" allowfullscreen></iframe>
-                <!-- Incorpora o quarto vídeo do YouTube -->
+                <iframe src="https://www.youtube.com/embed/D2KIu_yDeJk" title="Redes Neurais: Como Funciona a Base da IA" allowfullscreen></iframe>
                 <div class="video-info">
-                <!-- Informações do quarto vídeo -->
                     <h3>Redes Neurais</h3>
-                    <!-- Título do quarto vídeo -->
-                    <p>Compreenda o funcionamento das redes neurais artificiais e sua importância para criar sistemas inteligentes que aprenden sozinhos.</p>
-                    <!-- Descrição do conteúdo do quarto vídeo -->
+                    <p>Compreenda o funcionamento das redes neurais artificiais e sua importância para criar sistemas inteligentes que aprendem sozinhos.</p>
                     <span class="videos-qtd">6 vídeos</span>
-                    <!-- Quantidade de vídeos nesta seção -->
                 </div>
-                <!-- Fim informações do quarto vídeo -->
             </div>
-            <!-- Fim wrapper do quarto vídeo -->
         </div>
-        <!-- Fim do container de vídeos -->
     </section>
-    <!-- Fim da seção de IA -->
 
     <!-- Terceira seção: Futuro SETEC -->
     <section id="futuro-setec">
-    <!-- Define uma seção com ID "futuro-setec" para navegação por âncora -->
-        <h2 class="section-title">Futuro Relacionado à SETEC</h2>
-        <!-- Título da seção -->
-        <div class="setec-content">
-        <!-- Container para o conteúdo da SETEC -->
-            <img src="https://placehold.co/200x100/000000/ffffff?text=SETEC" alt="Logo SETEC" class="setec-logo">
-            <!-- Imagem placeholder para o logo da SETEC com texto alternativo para acessibilidade -->
+        <h2 class="section-title">Futuro Relacionado à SETEC</h2> <!-- Título da seção -->
+        <div class="setec-content"> <!-- Bloco de conteúdo sobre SETEC -->
+            <img src="https://placehold.co/200x100/000000/ffffff?text=SETEC" alt="Logo SETEC" class="setec-logo"> <!-- Imagem representando a SETEC -->
+            <!-- Texto explicando a importância da SETEC para o curso e seu papel no futuro -->
             <p>A Secretaria de Educação Profissional e Tecnológica (SETEC) tem um papel fundamental na expansão e consolidação dos cursos de tecnologia no Brasil, incluindo o curso de Desenvolvimento de Sistemas.</p>
-            <!-- Primeiro parágrafo sobre a SETEC -->
             <p>No futuro, espera-se que a SETEC continue fomentando a integração entre educação e mercado de trabalho, atualizando constantemente as diretrizes curriculares para acompanhar as rápidas transformações tecnológicas.</p>
-            <!-- Segundo parágrafo sobre a SETEC -->
             <p>Além disso, SETEC promove parcerias estratégicas entre instituições de ensino e empresas do setor, ampliando oportunidades de estágio, desenvolvimento de projetos inovadores e empregabilidade para os estudantes.</p>
-            <!-- Terceiro parágrafo sobre a SETEC -->
             <p>Burzuk – Jean Carlos de Souza, como aluno exemplar, demonstra como a dedicação e o uso das tecnologias modernas podem gerar resultados concretos na prática profissional.</p>
-            <!-- Quarto parágrafo destacando o aluno exemplar -->
             <p>O incentivo à pesquisa, à inovação e à aplicação prática do conhecimento garante que cada estudante esteja pronto para os desafios de um mercado cada vez mais competitivo e tecnológico.</p>
-            <!-- Quinto parágrafo sobre a SETEC -->
         </div>
-        <!-- Fim do container de conteúdo -->
     </section>
-    <!-- Fim da seção SETEC -->
 
     <!-- Rodapé -->
     <footer>
-    <!-- Tag semântica para o rodapé da página -->
-        <p>Curso de Desenvolvimento de Sistemas</p>
-        <!-- Informação do curso no rodapé -->
-        <p>© 2023 - Todos os direitos reservados</p>
-        <!-- Informação de copyright -->
-        <div class="social-icons">
-        <!-- Container para os ícones de redes sociais -->
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <!-- Link para Facebook com ícone -->
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <!-- Link para Instagram com ícone -->
-            <a href="#"><i class="fab fa-youtube"></i></a>
-            <!-- Link para YouTube com ícone -->
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <!-- Link para LinkedIn com ícone -->
+        <p>Curso de Desenvolvimento de Sistemas</p> <!-- Nome do curso no rodapé -->
+        <p>© 2023 - Todos os direitos reservados</p> <!-- Direitos autorais -->
+        <div class="social-icons"> <!-- Ícones de redes sociais -->
+            <a href="#"><i class="fab fa-facebook"></i></a> <!-- Ícone Facebook -->
+            <a href="#"><i class="fab fa-instagram"></i></a> <!-- Ícone Instagram -->
+            <a href="#"><i class="fab fa-youtube"></i></a> <!-- Ícone YouTube -->
+            <a href="#"><i class="fab fa-linkedin"></i></a> <!-- Ícone LinkedIn -->
         </div>
-        <!-- Fim dos ícones sociais -->
     </footer>
-    <!-- Fim do rodapé -->
 
     <!-- SCRIPT JAVASCRIPT PARA FUNDO ANIMADO -->
-    <script>
-    // Inicia o script JavaScript
-        // Seleciona o container do fundo
-        const universe = document.querySelector('.universe');
-        // Obtém referência ao elemento com classe 'universe' usando o seletor querySelector
-        const starsCount = 100; // número de estrelas/burbuletas
-        // Define a quantidade de estrelas a serem criadas (100)
-
-        for(let i = 0; i < starsCount; i++) {
-        // Inicia loop para criar cada estrela (executa 100 vezes)
-            const star = document.createElement('span'); // cria uma estrela
-            // Cria um elemento span para representar uma estrela
-            const size = Math.random() * 3 + 1; // tamanho aleatório
-            // Gera um tamanho aleatório entre 1 e 4 (Math.random() gera número entre 0 e 1)
-            star.style.width = `${size}px`;
-            // Define a largura da estrela usando o tamanho gerado
-            star.style.height = `${size}px`;
-            // Define a altura da estrela usando o mesmo tamanho (criando um quadrado)
-            star.style.left = `${Math.random() * 100}%`; // posição horizontal aleatória
-            // Define posição horizontal aleatória (0% a 100%) usando Math.random()
-            star.style.top = `${Math.random() * 100}%`;  // posição vertical aleatória
-            // Define posição vertical aleatória (0% a 100%) usando Math.random()
-            star.style.animationDuration = `${Math.random() * 10 + 5}s`; // duração da animação
-            // Define duração aleatória da animação (5 a 15 segundos)
-            star.style.animationDelay = `${Math.random() * 5}s`; // atraso da animação
-            // Define atraso aleatório para início da animação (0 a 5 segundos)
-            universe.appendChild(star);
-            // Adiciona a estrela ao container universe (tornando-a visível na página)
-        }
-        // Finaliza o loop
-    </script>
-    <!-- Fim do script JavaScript -->
-</body>
-<!-- Finaliza o corpo do documento -->
-</html>
-<!-- Finaliza o documento HTML -->
+   
