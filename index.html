@@ -1,32 +1,246 @@
 <!DOCTYPE html>
-<!-- Declara o tipo de documento como HTML5 -->
+<!-- Declaração do tipo de documento - indica que é um documento HTML5 -->
 <html lang="pt-BR">
-<!-- Define o idioma principal da página como português do Brasil -->
+<!-- Elemento raiz do documento, com atributo de idioma definido como português brasileiro -->
 <head>
-<!-- Início da seção head - contém metadados e links para recursos externos -->
+<!-- Cabeçalho do documento - contém metadados, links para recursos externos e o título da página -->
 <meta charset="UTF-8">
-<!-- Define a codificação de caracteres como UTF-8 para suportar caracteres especiais -->
+<!-- Define a codificação de caracteres como UTF-8 para suportar caracteres especiais e acentos -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Configura a viewport para responsividade em dispositivos móveis -->
+<!-- Configura a viewport para layouts responsivos em dispositivos móveis -->
 <title>Curso de Desenvolvimento de Sistemas com IA</title>
-<!-- Define o título da página que aparece na aba do navegador -->
+<!-- Título da página que aparece na aba do navegador -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<!-- Importa a biblioteca Font Awesome para ícones -->
-<link rel="stylesheet" href="style.css">
-<!-- Link para o arquivo CSS externo que contém estilos personalizados -->
+<!-- Importa a biblioteca Font Awesome para usar ícones -->
+<style>
+    /* Estilos CSS para formatar a página */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: #0a0a2a;
+        position: relative;
+        overflow-x: hidden;
+    }
+    
+    .universe {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: linear-gradient(to bottom, #000428, #004e92);
+        overflow: hidden;
+    }
+    
+    .universe span {
+        position: absolute;
+        background: #fff;
+        border-radius: 50%;
+        animation: animate 5s linear infinite;
+    }
+    
+    @keyframes animate {
+        0% {
+            transform: translateY(0) scale(0.5);
+            opacity: 0;
+        }
+        10% {
+            opacity: 1;
+        }
+        90% {
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(-1000%) scale(1.2);
+            opacity: 0;
+        }
+    }
+    
+    header {
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        text-align: center;
+        padding: 2rem;
+        margin: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #4deeea;
+    }
+    
+    header p {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    section {
+        background: rgba(255, 255, 255, 0.9);
+        margin: 2rem 1rem;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .section-title {
+        text-align: center;
+        color: #004e92;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        border-bottom: 2px solid #4deeea;
+        padding-bottom: 0.5rem;
+    }
+    
+    .curso-content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .curso-texto {
+        flex: 1;
+        min-width: 300px;
+    }
+    
+    .curso-texto p {
+        margin-bottom: 1rem;
+        text-align: justify;
+    }
+    
+    .curso-imagem {
+        flex: 1;
+        min-width: 300px;
+        text-align: center;
+    }
+    
+    .curso-imagem img {
+        max-width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .videos-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .video-wrapper {
+        background: #f4f4f4;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+    
+    .video-wrapper:hover {
+        transform: translateY(-5px);
+    }
+    
+    .video-wrapper iframe {
+        width: 100%;
+        height: 200px;
+        border: none;
+    }
+    
+    .video-info {
+        padding: 1rem;
+    }
+    
+    .video-info h3 {
+        color: #004e92;
+        margin-bottom: 0.5rem;
+    }
+    
+    .video-info p {
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .videos-qtd {
+        background: #004e92;
+        color: white;
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+    }
+    
+    .setec-content {
+        text-align: center;
+    }
+    
+    .setec-logo {
+        margin: 1rem auto;
+        display: block;
+    }
+    
+    .setec-content p {
+        margin-bottom: 1rem;
+        text-align: justify;
+    }
+    
+    footer {
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        text-align: center;
+        padding: 2rem;
+        margin: 1rem;
+        border-radius: 10px;
+    }
+    
+    .social-icons {
+        margin-top: 1rem;
+    }
+    
+    .social-icons a {
+        color: white;
+        font-size: 1.5rem;
+        margin: 0 0.5rem;
+        transition: color 0.3s ease;
+    }
+    
+    .social-icons a:hover {
+        color: #4deeea;
+    }
+    
+    @media (max-width: 768px) {
+        .curso-content {
+            flex-direction: column;
+        }
+        
+        .videos-container {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+<!-- Fim dos estilos CSS -->
 </head>
 <!-- Fim da seção head -->
 <body>
-<!-- Início do corpo da página - conteúdo visível para o usuário -->
+<!-- Corpo do documento - contém todo o conteúdo visível da página -->
 <div class="universe"></div>
-<!-- Div que servirá como container para o fundo animado com estrelas -->
+<!-- Div para o fundo animado com estrelas (será preenchido via JavaScript) -->
 
 <header>
-<!-- Cabeçalho da página -->
+<!-- Cabeçalho da página com título e informações introdutórias -->
 <h1>Curso de Desenvolvimento de Sistemas</h1>
-<!-- Título principal -->
+<!-- Título principal da página -->
 <p>Preparando os profissionais do futuro para o mercado de tecnologia</p>
-<!-- Subtítulo/descrição -->
+<!-- Subtítulo/descrição do curso -->
 <p><strong>Aluno Destaque:</strong> Burzuk – Jean Carlos de Souza</p>
 <!-- Destaque para o aluno exemplar -->
 </header>
@@ -40,19 +254,26 @@
 <!-- Container para organizar conteúdo em colunas -->
 <div class="curso-texto">
 <!-- Div para o texto descritivo -->
-<p>O curso de Desenvolvimento de Sistemas prepara os estudantes...</p>
-<!-- Parágrafos com informações sobre o curso -->
-<p>Com uma abordagem prática e atualizada, o curso oferece...</p>
-<p>Os profissionais formados neste curso estarão aptos a...</p>
-<p>Além disso, os alunos são incentivados a participar...</p>
-<p>O desenvolvimento de soft skills, como trabalho em equipe...</p>
+<p>O curso de Desenvolvimento de Sistemas prepara os estudantes para atuarem no desenvolvimento de soluções tecnológicas inovadoras, combinando conhecimentos de programação, banco de dados e desenvolvimento web.</p>
+<!-- Primeiro parágrafo descritivo -->
+<p>Com uma abordagem prática e atualizada, o curso oferece aos alunos a oportunidade de trabalhar com as ferramentas e tecnologias mais recentes do mercado, preparando-os para os desafios da indústria 4.0.</p>
+<!-- Segundo parágrafo descritivo -->
+<p>Os profissionais formados neste curso estarão aptos a desenvolver sistemas web e mobile, implementar bancos de dados, criar soluções baseadas em dados e muito mais.</p>
+<!-- Terceiro parágrafo descritivo -->
+<p>Além disso, os alunos são incentivados a participar de projetos especiais e competições de programação, ampliando suas habilidades técnicas e seu raciocínio lógico.</p>
+<!-- Quarto parágrafo descritivo -->
+<p>O desenvolvimento de soft skills, como trabalho em equipe, criatividade e capacidade de resolver problemas complexos, também é prioridade do curso, preparando verdadeiros profissionais completos.</p>
+<!-- Quinto parágrafo descritivo -->
 </div>
+<!-- Fim do texto descritivo -->
 <div class="curso-imagem">
 <!-- Div para a imagem ilustrativa -->
-<img src="https://placehold.co/600x400/000000/ffffff?text=Desenvolvimento+de+Sistemas" alt="Imagem representando o curso de Desenvolvimento de Sistemas">
-<!-- Imagem placeholder com texto alternativo para acessibilidade -->
+<img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80" alt="Imagem representando o curso de Desenvolvimento de Sistemas">
+<!-- Imagem real relacionada ao tema com texto alternativo para acessibilidade -->
 </div>
+<!-- Fim da div da imagem -->
 </div>
+<!-- Fim do container de conteúdo -->
 </section>
 <!-- Fim da seção "Sobre" -->
 
@@ -62,34 +283,90 @@
 <!-- Título da seção -->
 <div class="curso-texto">
 <!-- Div para texto descritivo sobre IA -->
-<p>A Inteligência Artificial é uma das áreas mais promissoras...</p>
-<p>Os estudantes aprendem desde os fundamentos até as técnicas...</p>
-<p>Durante o curso, os alunos exploram algoritmos de aprendizado...</p>
-<p>Burzuk – Jean Carlos de Souza é um exemplo de dedicação...</p>
-<p>O curso também incentiva a participação em hackathons...</p>
+<p>A Inteligência Artificial é uma das áreas mais promissoras da tecnologia atual, e o curso de Desenvolvimento de Sistemas prepara os alunos para dominar os conceitos e aplicações práticas de IA.</p>
+<!-- Primeiro parágrafo sobre IA -->
+<p>Os estudantes aprendem desde os fundamentos até as técnicas mais avançadas, com foco na implementação de soluções reais para problemas do mundo real.</p>
+<!-- Segundo parágrafo sobre IA -->
+<p>Durante o curso, os alunos exploram algoritmos de aprendizado de máquina, redes neurais e análise de grandes volumes de dados, desenvolvendo projetos que simulam cenários do mercado de trabalho.</p>
+<!-- Terceiro parágrafo sobre IA -->
+<p>Burzuk – Jean Carlos de Souza é um exemplo de dedicação, aplicando suas habilidades em projetos inovadores que envolvem visão computacional, processamento de linguagem natural e sistemas inteligentes.</p>
+<!-- Quarto parágrafo sobre IA com destaque para o aluno -->
+<p>O curso também incentiva a participação em hackathons e workshops de IA, promovendo a troca de experiências e fortalecendo a capacidade de criação de soluções originais.</p>
+<!-- Quinto parágrafo sobre IA -->
 </div>
+<!-- Fim do texto descritivo sobre IA -->
 
 <div class="videos-container">
 <!-- Container para os vídeos sobre IA -->
 <div class="video-wrapper">
 <!-- Wrapper para cada vídeo individual -->
 <iframe src="https://www.youtube.com/embed/CmAcro8YblU" title="Inteligência Artificial: O Que É e Como Funciona" allowfullscreen></iframe>
-<!-- Incorporação de vídeo do YouTube -->
+<!-- Incorporação de vídeo do YouTube com título e permissão para tela cheia -->
 <div class="video-info">
 <!-- Informações sobre o vídeo -->
 <h3>O Que É IA</h3>
 <!-- Título do vídeo -->
-<p>Entenda os conceitos fundamentais da Inteligência Artificial...</p>
+<p>Entenda os conceitos fundamentais da Inteligência Artificial e como ela transforma diferentes setores da indústria e da sociedade.</p>
 <!-- Descrição do vídeo -->
 <span class="videos-qtd">5 vídeos</span>
 <!-- Quantidade de vídeos nesta categoria -->
 </div>
+<!-- Fim das informações do vídeo -->
 </div>
-<!-- Estrutura repetida para os outros três vídeos -->
-<div class="video-wrapper">...</div>
-<div class="video-wrapper">...</div>
-<div class="video-wrapper">...</div>
+<!-- Fim do wrapper do primeiro vídeo -->
+
+<div class="video-wrapper">
+<!-- Wrapper para o segundo vídeo -->
+<iframe src="https://www.youtube.com/embed/HNBtdyMjxKU" title="Inteligência Artificial e Seus Impactos na Sociedade" allowfullscreen></iframe>
+<!-- Incorporação do segundo vídeo do YouTube -->
+<div class="video-info">
+<!-- Informações sobre o segundo vídeo -->
+<h3>Impactos da IA</h3>
+<!-- Título do segundo vídeo -->
+<p>Como a IA está transformando a sociedade, mudando a forma como trabalhamos, aprendemos e nos comunicamos, e seu impacto ético e econômico.</p>
+<!-- Descrição do segundo vídeo -->
+<span class="videos-qtd">8 vídeos</span>
+<!-- Quantidade de vídeos nesta categoria -->
 </div>
+<!-- Fim das informações do segundo vídeo -->
+</div>
+<!-- Fim do wrapper do segundo vídeo -->
+
+<div class="video-wrapper">
+<!-- Wrapper para o terceiro vídeo -->
+<iframe src="https://www.youtube.com/embed/V2POyQVQuzA" title="Machine Learning: Como a Máquina Aprende Sozinha" allowfullscreen></iframe>
+<!-- Incorporação do terceiro vídeo do YouTube -->
+<div class="video-info">
+<!-- Informações sobre o terceiro vídeo -->
+<h3>Machine Learning</h3>
+<!-- Título do terceiro vídeo -->
+<p>Os fundamentos do aprendizado de máquina, suas aplicações práticas e como Burzuk – Jean Carlos de Souza aplica esses conhecimentos em projetos reais.</p>
+<!-- Descrição do terceiro vídeo -->
+<span class="videos-qtd">7 vídeos</span>
+<!-- Quantidade de vídeos nesta categoria -->
+</div>
+<!-- Fim das informações do terceiro vídeo -->
+</div>
+<!-- Fim do wrapper do terceiro vídeo -->
+
+<div class="video-wrapper">
+<!-- Wrapper para o quarto vídeo -->
+<iframe src="https://www.youtube.com/embed/D2KIu_yDeJk" title="Redes Neurais: Como Funciona a Base da IA" allowfullscreen></iframe>
+<!-- Incorporação do quarto vídeo do YouTube -->
+<div class="video-info">
+<!-- Informações sobre o quarto vídeo -->
+<h3>Redes Neurais</h3>
+<!-- Título do quarto vídeo -->
+<p>Compreenda o funcionamento das redes neurais artificiais e sua importância para criar sistemas inteligentes que aprendem sozinhos.</p>
+<!-- Descrição do quarto vídeo -->
+<span class="videos-qtd">6 vídeos</span>
+<!-- Quantidade de vídeos nesta categoria -->
+</div>
+<!-- Fim das informações do quarto vídeo -->
+</div>
+<!-- Fim do wrapper do quarto vídeo -->
+</div>
+<!-- Fim do container de vídeos -->
 </section>
 <!-- Fim da seção sobre IA -->
 
@@ -99,15 +376,20 @@
 <!-- Título da seção -->
 <div class="setec-content">
 <!-- Container para o conteúdo da SETEC -->
-<img src="https://placehold.co/200x100/000000/ffffff?text=SETEC" alt="Logo SETEC" class="setec-logo">
-<!-- Imagem placeholder para o logo da SETEC -->
-<p>A Secretaria de Educação Profissional e Tecnológica (SETEC)...</p>
-<!-- Parágrafos com informações sobre a SETEC -->
-<p>No futuro, espera-se que a SETEC continue fomentando...</p>
-<p>Além disso, SETEC promove parcerias estratégicas...</p>
-<p>Burzuk – Jean Carlos de Souza, como aluno exemplar...</p>
-<p>O incentivo à pesquisa, à inovação e à aplicação prática...</p>
+<img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=200&q=80" alt="Logo SETEC" class="setec-logo">
+<!-- Imagem real relacionada à SETEC com texto alternativo -->
+<p>A Secretaria de Educação Profissional e Tecnológica (SETEC) tem um papel fundamental na expansão e consolidação dos cursos de tecnologia no Brasil, incluindo o curso de Desenvolvimento de Sistemas.</p>
+<!-- Primeiro parágrafo sobre SETEC -->
+<p>No futuro, espera-se que a SETEC continue fomentando a integração entre educação e mercado de trabalho, atualizando constantemente as diretrizes curriculares para acompanhar as rápidas transformações tecnológicas.</p>
+<!-- Segundo parágrafo sobre SETEC -->
+<p>Além disso, SETEC promove parcerias estratégicas entre instituições de ensino e empresas do setor, ampliando oportunidades de estágio, desenvolvimento de projetos inovadores e empregabilidade para os estudantes.</p>
+<!-- Terceiro parágrafo sobre SETEC -->
+<p>Burzuk – Jean Carlos de Souza, como aluno exemplar, demonstra como a dedicação e o uso das tecnologias modernas podem gerar resultados concretos na prática profissional.</p>
+<!-- Quarto parágrafo sobre SETEC com destaque para o aluno -->
+<p>O incentivo à pesquisa, à inovação e à aplicação prática do conhecimento garante que cada estudante esteja pronto para os desafios de um mercado cada vez mais competitivo e tecnológico.</p>
+<!-- Quinto parágrafo sobre SETEC -->
 </div>
+<!-- Fim do conteúdo da SETEC -->
 </section>
 <!-- Fim da seção SETEC -->
 
@@ -128,13 +410,14 @@
 <a href="#"><i class="fab fa-linkedin"></i></a>
 <!-- Link para LinkedIn com ícone -->
 </div>
+<!-- Fim dos ícones sociais -->
 </footer>
 <!-- Fim do rodapé -->
 
 <script>
 // Início do script JavaScript para criar o fundo animado
 const universe = document.querySelector('.universe');
-// Seleciona o elemento com a classe "universe"
+// Seleciona o elemento com a classe "universe" onde as estrelas serão adicionadas
 const starsCount = 100;
 // Define o número de estrelas a serem criadas
 
@@ -149,9 +432,9 @@ star.style.width = `${size}px`;
 star.style.height = `${size}px`;
 // Define a altura da estrela
 star.style.left = `${Math.random() * 100}%`;
-// Posiciona aleatoriamente na horizontal
+// Posiciona aleatoriamente na horizontal (0% a 100%)
 star.style.top = `${Math.random() * 100}%`;
-// Posiciona aleatoriamente na vertical
+// Posiciona aleatoriamente na vertical (0% a 100%)
 star.style.animationDuration = `${Math.random() * 10 + 5}s`;
 // Define duração aleatória da animação entre 5 e 15 segundos
 star.style.animationDelay = `${Math.random() * 5}s`;
