@@ -1,46 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-BR"> <!-- Define o idioma da página como Português do Brasil -->
 <head>
-<meta charset="UTF-8"> <!-- Codificação de caracteres como UTF-8, compatível com caracteres especiais -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define que a página é responsiva e se adapta a diferentes tamanhos de tela -->
+<meta charset="UTF-8"> <!-- Codificação de caracteres como UTF-8 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade -->
 <title>Curso de Desenvolvimento de Sistemas com IA</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!-- Importa os ícones da Font Awesome -->
-<link rel="stylesheet" href="style.css"> <!-- Importa o arquivo CSS externo com os estilos da página -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!-- Ícones -->
+<link rel="stylesheet" href="style.css"> <!-- Estilos -->
 </head>
 <body>
     <!-- FUNDO ANIMADO -->
-    <div class="universe"></div> <!-- Container onde as "estrelas" animadas serão adicionadas via JavaScript -->
+    <div class="universe"></div> <!-- Estrelas animadas -->
 
     <!-- Cabeçalho da página -->
     <header>
-        <h1>Curso de Desenvolvimento de Sistemas</h1> <!-- Título principal -->
-        <p>Preparando os profissionais do futuro para o mercado de tecnologia</p> <!-- Subtítulo -->
-        <p><strong>Aluno Destaque:</strong> Burzuk – Jean Carlos de Souza</p> <!-- Destaque para aluno -->
+        <h1>Curso de Desenvolvimento de Sistemas</h1>
+        <p>Preparando os profissionais do futuro para o mercado de tecnologia</p>
+        <p><strong>Aluno Destaque:</strong> Burzuk – Jean Carlos de Souza</p>
+
+        <!-- MENU DE NAVEGAÇÃO -->
+        <nav class="menu-navegacao">
+            <a href="pagina1.html"><i class="fas fa-book"></i> Página 1 - Sobre o Curso</a>
+            <a href="pagina2.html"><i class="fas fa-robot"></i> Página 2 - Inteligência Artificial</a>
+        </nav>
     </header>
 
     <!-- Primeira seção: Sobre o curso -->
     <section id="sobre">
-        <h2 class="section-title">Sobre o Curso</h2> <!-- Título da seção -->
-        <div class="curso-content"> <!-- Container para organizar texto e imagem lado a lado -->
-            <div class="curso-texto"> <!-- Bloco de texto -->
-                <!-- Parágrafos explicativos sobre o conteúdo e objetivos do curso -->
+        <h2 class="section-title">Sobre o Curso</h2>
+        <div class="curso-content">
+            <div class="curso-texto">
                 <p>O curso de Desenvolvimento de Sistemas prepara os estudantes para atuarem no desenvolvimento de soluções tecnológicas inovadoras, combinando conhecimentos de programação, banco de dados e desenvolvimento web.</p>
                 <p>Com uma abordagem prática e atualizada, o curso oferece aos alunos a oportunidade de trabalhar com as ferramentas e tecnologias mais recentes do mercado, preparando-os para os desafios da indústria 4.0.</p>
                 <p>Os profissionais formados neste curso estarão aptos a desenvolver sistemas web e mobile, implementar bancos de dados, criar soluções baseadas em dados e muito mais.</p>
                 <p>Além disso, os alunos são incentivados a participar de projetos especiais e competições de programação, ampliando suas habilidades técnicas e seu raciocínio lógico.</p>
                 <p>O desenvolvimento de soft skills, como trabalho em equipe, criatividade e capacidade de resolver problemas complexos, também é prioridade do curso, preparando verdadeiros profissionais completos.</p>
             </div>
-            <div class="curso-imagem"> <!-- Bloco de imagem -->
-                <img src="https://placehold.co/600x400/000000/ffffff?text=Desenvolvimento+de+Sistemas" alt="Imagem representando o curso de Desenvolvimento de Sistemas"> <!-- Imagem ilustrativa do curso -->
+            <div class="curso-imagem">
+                <img src="https://placehold.co/600x400/000000/ffffff?text=Desenvolvimento+de+Sistemas" alt="Imagem representando o curso de Desenvolvimento de Sistemas">
             </div>
         </div>
     </section>
 
     <!-- Segunda seção: Inteligência Artificial -->
     <section id="ia-topicos">
-        <h2 class="section-title">Inteligência Artificial no Curso de DS</h2> <!-- Título da seção -->
+        <h2 class="section-title">Inteligência Artificial no Curso de DS</h2>
         <div class="curso-texto">
-            <!-- Parágrafos explicando como a IA é abordada no curso -->
             <p>A Inteligência Artificial é uma das áreas mais promissoras da tecnologia atual, e o curso de Desenvolvimento de Sistemas prepara os alunos para dominar os conceitos e aplicações práticas de IA.</p>
             <p>Os estudantes aprendem desde os fundamentos até as técnicas mais avançadas, com foco na implementação de soluções reais para problemas do mundo real.</p>
             <p>Durante o curso, os alunos exploram algoritmos de aprendizado de máquina, redes neurais e análise de grandes volumes de dados, desenvolvendo projetos que simulam cenários do mercado de trabalho.</p>
@@ -48,18 +52,16 @@
             <p>O curso também incentiva a participação em hackathons e workshops de IA, promovendo a troca de experiências e fortalecendo a capacidade de criação de soluções originais.</p>
         </div>
 
-        <div class="videos-container"> <!-- Container geral dos vídeos -->
-            <!-- Bloco individual de vídeo -->
+        <div class="videos-container">
             <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/CmAcro8YblU" title="Inteligência Artificial: O Que É e Como Funciona" allowfullscreen></iframe> <!-- Vídeo incorporado do YouTube -->
-                <div class="video-info"> <!-- Informações sobre o vídeo -->
+                <iframe src="https://www.youtube.com/embed/CmAcro8YblU" title="Inteligência Artificial: O Que É e Como Funciona" allowfullscreen></iframe>
+                <div class="video-info">
                     <h3>O Que É IA</h3>
                     <p>Entenda os conceitos fundamentais da Inteligência Artificial e como ela transforma diferentes setores da indústria e da sociedade.</p>
-                    <span class="videos-qtd">5 vídeos</span> <!-- Quantidade de vídeos relacionados -->
+                    <span class="videos-qtd">5 vídeos</span>
                 </div>
             </div>
 
-            <!-- Outro vídeo -->
             <div class="video-wrapper">
                 <iframe src="https://www.youtube.com/embed/HNBtdyMjxKU" title="Inteligência Artificial e Seus Impactos na Sociedade" allowfullscreen></iframe>
                 <div class="video-info">
@@ -69,7 +71,6 @@
                 </div>
             </div>
 
-            <!-- Outro vídeo -->
             <div class="video-wrapper">
                 <iframe src="https://www.youtube.com/embed/V2POyQVQuzA" title="Machine Learning: Como a Máquina Aprende Sozinha" allowfullscreen></iframe>
                 <div class="video-info">
@@ -79,7 +80,6 @@
                 </div>
             </div>
 
-            <!-- Outro vídeo -->
             <div class="video-wrapper">
                 <iframe src="https://www.youtube.com/embed/D2KIu_yDeJk" title="Redes Neurais: Como Funciona a Base da IA" allowfullscreen></iframe>
                 <div class="video-info">
@@ -93,10 +93,9 @@
 
     <!-- Terceira seção: Futuro SETEC -->
     <section id="futuro-setec">
-        <h2 class="section-title">Futuro Relacionado à SETEC</h2> <!-- Título da seção -->
-        <div class="setec-content"> <!-- Bloco de conteúdo sobre SETEC -->
-            <img src="https://placehold.co/200x100/000000/ffffff?text=SETEC" alt="Logo SETEC" class="setec-logo"> <!-- Imagem representando a SETEC -->
-            <!-- Texto explicando a importância da SETEC para o curso e seu papel no futuro -->
+        <h2 class="section-title">Futuro Relacionado à SETEC</h2>
+        <div class="setec-content">
+            <img src="https://placehold.co/200x100/000000/ffffff?text=SETEC" alt="Logo SETEC" class="setec-logo">
             <p>A Secretaria de Educação Profissional e Tecnológica (SETEC) tem um papel fundamental na expansão e consolidação dos cursos de tecnologia no Brasil, incluindo o curso de Desenvolvimento de Sistemas.</p>
             <p>No futuro, espera-se que a SETEC continue fomentando a integração entre educação e mercado de trabalho, atualizando constantemente as diretrizes curriculares para acompanhar as rápidas transformações tecnológicas.</p>
             <p>Além disso, SETEC promove parcerias estratégicas entre instituições de ensino e empresas do setor, ampliando oportunidades de estágio, desenvolvimento de projetos inovadores e empregabilidade para os estudantes.</p>
@@ -107,15 +106,14 @@
 
     <!-- Rodapé -->
     <footer>
-        <p>Curso de Desenvolvimento de Sistemas</p> <!-- Nome do curso no rodapé -->
-        <p>© 2023 - Todos os direitos reservados</p> <!-- Direitos autorais -->
-        <div class="social-icons"> <!-- Ícones de redes sociais -->
-            <a href="#"><i class="fab fa-facebook"></i></a> <!-- Ícone Facebook -->
-            <a href="#"><i class="fab fa-instagram"></i></a> <!-- Ícone Instagram -->
-            <a href="#"><i class="fab fa-youtube"></i></a> <!-- Ícone YouTube -->
-            <a href="#"><i class="fab fa-linkedin"></i></a> <!-- Ícone LinkedIn -->
+        <p>Curso de Desenvolvimento de Sistemas</p>
+        <p>© 2023 - Todos os direitos reservados</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
         </div>
     </footer>
-
-    <!-- SCRIPT JAVASCRIPT PARA FUNDO ANIMADO -->
-   
+</body>
+</html>
